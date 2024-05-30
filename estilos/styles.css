@@ -1,0 +1,193 @@
+:root{
+    /*Colores primarios*/
+    --Red: #f65351;
+    --Blue: hsl(219, 85%, 26%);
+    /*Colores neutrales*/
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(218, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: var(--White);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    body{
+        background-color: var(--Very-light-grayish-blue);
+    }
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0rem;
+}
+
+@media (min-width: 768px) {
+    .contenedor{
+        width: 70rem;
+        background-color: var(--White);
+        padding: 4rem;
+        margin: 3rem 0rem;
+        border-radius: 1rem;
+    }
+}
+
+.notifications{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1{
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--Very-dark-blue);
+}
+
+.number-notifications{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--White);
+    background-color: var(--Blue);
+    padding: .2rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.mark{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+    cursor: pointer;
+}
+
+.new-notification, .old-notification, .picture-notification{
+    width: 100%;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+}
+
+.new-notification{
+    background-color: var(--Light-grayish-blue-1);
+}
+
+.old-notification, .picture-notification{
+    background-color: var(--White);
+}
+
+.new-notification img, .old-notification img, .picture-notification img{
+    width: 20%;
+    aspect-ratio: 1/1;
+}
+
+.picture-notification .picture img{
+    width: 100%;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .new-notification img, .old-notification img, .picture-notification img{
+        width: 15%;
+    }
+    .picture-notification .picture img{
+        width: 60%;
+    }
+}
+
+.box-comment{
+    border: solid 0.1rem var(--Grayish-blue);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-left: 10rem;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .box-comment{
+        margin-left: 12rem;
+    }
+}
+
+.box-comment:hover{
+    background-color: var(--Light-grayish-blue-1);
+    border: solid 0.1rem transparent;
+}
+
+.name{
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--Very-dark-blue);
+    cursor: pointer;
+}
+
+.name:hover{
+    color: var(--Blue);
+}
+
+h3, .comment{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+}
+
+.remark{
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--Dark-grayish-blue);
+    cursor: pointer;
+}
+
+.remark:hover{
+    color: var(--Blue);
+}
+
+.remark2{
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--Blue);
+}
+
+.time{
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 0;
+    color: var(--Grayish-blue);
+}
